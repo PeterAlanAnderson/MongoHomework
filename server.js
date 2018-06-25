@@ -23,7 +23,7 @@ app.engine("hbs", exphbs({
 }))
 app.set("view engine", "hbs")
 
-mongoose.connect("mongodb://localhost/nytarticles")
+// mongoose.connect("mongodb://localhost/nytarticles")
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
@@ -32,7 +32,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
-
 
 app.get("/", function (req, res) {
   Article.find({ "saved": false }, function (error, data) {
