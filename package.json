@@ -1,0 +1,29 @@
+{
+  "name": "mongohomework",
+  "version": "1.0.0",
+  "description": "This application scrapes article information from the New York Times and saves it in a Mongo database.  You can mark articles as \"Saved\" for later viewing and add notes to them.  Note recall and deletion functionality is... in progess.",
+  "main": "server.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express-handlebars": "^3.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterAlanAnderson/MongoHomework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterAlanAnderson/MongoHomework/issues"
+  },
+  "homepage": "https://github.com/PeterAlanAnderson/MongoHomework#readme"
+}
