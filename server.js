@@ -9,7 +9,7 @@ var db = require("./models")
 var Note = require("./models/note.js")
 var Article = require("./models/article.js")
 
-var PORT = 3000
+var PORT = process.env.PORT || 3000
 var app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))
