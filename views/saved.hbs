@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="col m12">
+        <h1>Saved Articles</h1>
+    </div>
+    <div class="col m12">
+        {{#if article}} {{#each article}}
+        <div>
+            <h4>{{this.title}}</h4>
+            <div>
+                <p> {{this.summary}}</p>
+                <a href={{this.link}} target="_blank">{{this.link}}</a>
+                <br>
+                <br>
+                <a href="/note/{{this._id}}">
+                    <button class="btn">Add a note</button>
+                </a>
+                <button class="btn" data-id={{this._id}}>Delete</button>
+                <br>
+                <br>
+            </div>
+        </div>
+        {{/each}} {{else}}
+        <div>
+            <h4>You have no saved articles</h4>
+        </div>
+        {{/if}}
+    </div>
+</div>

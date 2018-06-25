@@ -1,0 +1,36 @@
+<div class="container">
+    <h3>Leave a note on:</h3>
+    <div class="col m12">
+        <div>
+            <h4>{{article.title}}</h4>
+            <div>
+                <p> {{this.summary}}</p>
+                {{#if article.notes}} {{#each article.notes}}
+                <div class="card">
+                    <div class="card-content">
+                        <p class="previousNotes">{{this.content}}</p>
+                        <button type="button" class="btn" data-note-id={{this._id}} data-article-id={{this.article}}>Delete</button>
+                    </div>
+                </div>
+                {{/each}} {{else}}
+                <div>
+                    <div>
+                        <h4>No notes for this article yet.</h4>
+                    </div>
+                </div>
+                {{/if}}
+                <div class="row">
+                    <div class="col m8 input-field">
+                        <input id="noteField" type="text">
+                        <label for="noteField" class="active">Note:</label>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class="btn saveNote" data-id={{article._id}}>Submit</button>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
